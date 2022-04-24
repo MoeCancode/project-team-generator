@@ -61,7 +61,7 @@ function makeManagerHTML(data) {
       <p class="card-text">${data.officeNum}</p>
     </div>
   </div>`
-  console.log(managerString);
+//   console.log(managerString);
   return managerString;
 }
 

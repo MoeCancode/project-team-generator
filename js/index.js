@@ -1,6 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const managerJS = require("./manager");
+const managerjs = require("./manager");
 const employeejs = require("./employee");
 const internjs = require("./intern");
 const engineerjs = require("./engineer");
@@ -8,7 +8,7 @@ var htmlString = "";
 
 function startProject() {
   //Call function that inquires for manager details
-  managerJS().then(managerString => {
+  managerjs().then(managerString => {
     htmlString = htmlString + managerString;
     addEmployee();
   });
@@ -31,15 +31,20 @@ function addEmployee() {
     ])
     .then((answer) => {
       if (answer.choose == "ADD AN ENGINEER") {
-        // engineerjs();
-        console.log("Engineer");
+        engineerjs().then(engineerString => {
+            htmlString = htmlString + engineerString;
+        })
         addEmployee();
-      } else if (answer.choose == "ADD AN INTERN") {
-        //   internjs();
-        console.log("Intern");
+      } 
+      else if (answer.choose == "ADD AN INTERN") {
+        internjs().then(internString => {
+            htmlString = htmlString + internString;
+        })
         addEmployee();
-      } else {
-        compileHTML();
+      } 
+      else {
+        // compileHTML();
+        console.log(htmlString);
       }
     });
 }

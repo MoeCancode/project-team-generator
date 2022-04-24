@@ -20,28 +20,28 @@ function inquireIntern() {
     return inquirer.prompt([
         {
             type: "input",
-            message: "ENTER Intern NAME: ",
+            message: "ENTER INTERN NAME: ",
             name: "inputName",
         },
         {
             type: "input",
-            message: "ENTER Intern ID: ",
+            message: "ENTER INTERN ID: ",
             name: "inputID",
         },
         {
             type: "input",
-            message: "ENTER Intern EMAIL: ",
+            message: "ENTER INTERN EMAIL: ",
             name: "inputEmail",
         },
         {
             type: "input",
-            message: "ENTER Intern SCHOOL NAME: ",
+            message: "ENTER INTERN SCHOOL NAME: ",
             name: "inputSchool",
         }
     ]).then(answers => {
         const newIntern = new Intern(answers.inputName, answers.inputID, answers.inputEmail, answers.inputSchool);
         // console.log(newIntern);
-        makeInternHTML(newIntern);
+        return makeInternHTML(newIntern);
     })
 }
 
