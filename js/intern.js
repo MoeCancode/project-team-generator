@@ -17,7 +17,7 @@ class Intern extends EmployeeClass {
 }
 
 function inquireIntern() {
-    inquirer.prompt([
+    return inquirer.prompt([
         {
             type: "input",
             message: "ENTER Intern NAME: ",
@@ -40,7 +40,25 @@ function inquireIntern() {
         }
     ]).then(answers => {
         const newIntern = new Intern(answers.inputName, answers.inputID, answers.inputEmail, answers.inputSchool);
-        console.log(newIntern);
+        // console.log(newIntern);
         makeInternHTML(newIntern);
     })
 }
+
+function makeInternHTML(data) {
+    var internString = `
+    <div class="card">
+    <div class="card-header">
+        ${data.name}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">${data.id}</h5>
+      <p class="card-text">${data.email}</p>
+      <p class="card-text">${data.school}</p>
+    </div>
+  </div>`
+  console.log(managerString);
+  return internString;
+}
+
+module.exports = inquireIntern;

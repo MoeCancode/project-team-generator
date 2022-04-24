@@ -8,8 +8,11 @@ var htmlString = "";
 
 function startProject() {
   //Call function that inquires for manager details
-  htmlString = htmlString + managerJS();
-  addEmployee();
+  managerJS().then(managerString => {
+    htmlString = htmlString + managerString;
+    addEmployee();
+  });
+  
 }
 
 function addEmployee() {

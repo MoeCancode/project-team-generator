@@ -20,7 +20,7 @@ class Manager extends EmployeeClass {
 
 
 function inquireManager() {
-    inquirer.prompt([
+    return inquirer.prompt([
         {
             type: "input",
             message: "ENTER MANAGER NAME: ",
@@ -43,8 +43,8 @@ function inquireManager() {
         }
     ]).then(answers => {
         const newManager = new Manager(answers.inputName, answers.inputID, answers.inputEmail, answers.inputOfficeNumber);
-        console.log(newManager);
-        makeManagerHTML(newManager);
+        // console.log(newManager);
+        return makeManagerHTML(newManager);
         // addEmployee();
     })
 }
