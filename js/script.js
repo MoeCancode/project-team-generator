@@ -1,3 +1,7 @@
+const fs = require("fs");
+const inquirer = require("inquirer");
+
+
 class Employee {
     constructor(name, id, email) {
         this.name = name;
@@ -61,11 +65,40 @@ class Intern extends Employee {
     }
 }
 
+// const razuba = new Manager("Abuzar", 99, "johndoe@ok.com", 24);
 
-const razuba = new Manager("Abuzar", 99, "johndoe@ok.com", 24);
+// razuba.getName();
+// razuba.getId();
+// razuba.getEmail();
+// razuba.getofficeNum();
+// razuba.getRole();
 
-razuba.getName();
-razuba.getId();
-razuba.getEmail();
-razuba.getofficeNum();
-razuba.getRole();
+function startProject() {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "ENTER MANAGER NAME: ",
+            name: "inputName",
+        },
+        {
+            type: "input",
+            message: "ENTER MANAGER ID: ",
+            name: "inputID",
+        },
+        {
+            type: "input",
+            message: "ENTER MANAGER EMAIL: ",
+            name: "inputEmail",
+        },
+        {
+            type: "input",
+            message: "ENTER MANAGER OFFICE NUMBER: ",
+            name: "inputOfficeNumber",
+        }
+    ]).then(answers => {
+        const newManager = new Manager(answers.inputName, answers.inputID, answers.inputEmail, answers.inputOfficeNumber);
+        console.log(newManager);
+    })
+}
+
+startProject();
