@@ -72,6 +72,10 @@ function compileHtml() {
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script
+      src="https://kit.fontawesome.com/30f3a925af.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./style.css">
 
     <title>Team Generator</title>
@@ -81,9 +85,9 @@ function compileHtml() {
         <h1>Go Team!</h1>
     </div>
 
-    <div class="contents">
+    
     ${htmlString}
-    </div>
+    
 
 
     <script src="./js/script.js"></script>
