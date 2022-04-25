@@ -10,9 +10,30 @@ function startProject() {
   //Call function that inquires for manager details
   managerjs().then(managerString => {
     htmlString = htmlString + managerString;
-    addEmployee();
+    
+    addOrNo();
+
+    
   });
   
+}
+
+function addOrNo() {
+  inquirer.prompt([
+    {
+      type: "list",
+      message: "WOULD YOU LIKE TO ADD ANOTHER EMPLOYEE?",
+      name: "yesno",
+      choices: ["YES", "NO"]
+    }
+  ]).then(answer => {
+    if(answer.yesno == "YES") {
+      addEmployee();
+    }
+    else {
+      console.log(htmlString);
+    }
+  })
 }
 
 function addEmployee() {
@@ -20,12 +41,11 @@ function addEmployee() {
     .prompt([
       {
         type: "list",
-        message: "WOULD YOU LIKE TO ADD SOMEONE ELSE TO YOUR PROJECT? ",
+        message: "DO YOU WANT TO ADD AN ENGINEER OR AN INTERN? ",
         name: "choose",
         choices: [
           "ADD AN ENGINEER",
           "ADD AN INTERN",
-          "TEAM IS COMPLETE (EXIT)",
         ],
       },
     ])
@@ -33,19 +53,16 @@ function addEmployee() {
       if (answer.choose == "ADD AN ENGINEER") {
         engineerjs().then(engineerString => {
             htmlString = htmlString + engineerString;
+            addOrNo();
         })
-        addEmployee();
       } 
       else if (answer.choose == "ADD AN INTERN") {
         internjs().then(internString => {
             htmlString = htmlString + internString;
+            addOrNo();
         })
-        addEmployee();
+        
       } 
-      else {
-        // compileHTML();
-        console.log(htmlString);
-      }
     });
 }
 

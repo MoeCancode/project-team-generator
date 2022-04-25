@@ -57,7 +57,7 @@ function makeInternHTML(data) {
       <p class="card-text">${data.school}</p>
     </div>
   </div>`
-  console.log(managerString);
+//   console.log(internString);
   return internString;
 }
 

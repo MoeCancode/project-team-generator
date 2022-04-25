@@ -39,7 +39,7 @@ function inquireEngineer() {
             name: "inputGithub",
         }
     ]).then(answers => {
-        const newEngineer = new Manager(answers.inputName, answers.inputID, answers.inputEmail, answers.inputGithub);
+        const newEngineer = new Engineer(answers.inputName, answers.inputID, answers.inputEmail, answers.inputGithub);
         return makeEngineerHTML(newEngineer);
         // addEmployee();
     })
