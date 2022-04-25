@@ -16,6 +16,7 @@ function startProject() {
   });
 }
 
+//Asks if a new member needs to be added to team
 function addOrNo() {
   inquirer
     .prompt([
@@ -31,11 +32,12 @@ function addOrNo() {
         addEmployee();
       } else {
         compileHtml();
-        // compileCss();
+        compileCss();
       }
     });
 }
 
+//Asks if you want a new Engineer or intern
 function addEmployee() {
   inquirer
     .prompt([
@@ -61,6 +63,7 @@ function addEmployee() {
     });
 }
 
+//Takes the compiled html string and makes an html file
 function compileHtml() {
   var completeString = `
   <!DOCTYPE html>
@@ -82,7 +85,7 @@ function compileHtml() {
 </head>
 <body>
     <div class="heading">
-        <h1>Go Team!</h1>
+        <h1>PROJECT TEAM MEMBERS</h1>
     </div>
 
     
@@ -96,6 +99,42 @@ function compileHtml() {
     `;
 
     fs.writeFileSync(path.join(process.cwd(), "index.html"), completeString);
+}
+
+//Styles the created html file
+function compileCss() {
+  var cssString = `
+  body {
+    background-color: rgb(7, 56, 78);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(12, 0, 5);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    margin: 25px;
+}
+
+.card-header {
+    background-color: white;
+    color: black;
+}
+  `;
+
+  fs.writeFileSync(path.join(process.cwd(), "style.css"), cssString);
+
 }
 
 startProject();
