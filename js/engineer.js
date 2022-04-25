@@ -47,16 +47,16 @@ function inquireEngineer() {
 
 function makeEngineerHTML(data) {
     var EngineerString = `
-    <div class="card">
-    <div class="card-header">
-        ${data.name}
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">${data.id}</h5>
-      <p class="card-text">${data.email}</p>
-      <p class="card-text">${data.ghUsername}</p>
-    </div>
-  </div>`
+    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+  <div class="card-header"><i class="fa-solid fa-computer fa-xl"></i> ${data.role}</div>
+  <div class="card-body">
+    <h5 class="card-title">${data.name}</h5>
+    <p class="card-text">ID: ${data.id}</p>
+    <p class="card-text">EMAIL: <a href = "" >${data.email}</a></p>
+    <p class="card-text">GITHUB USERNAME: <a href = "https://github.com/${data.ghUsername}/" target = "_blank"> Github </a></p>
+  </div>
+</div>
+  `
   return EngineerString;
 }
 
