@@ -9,10 +9,10 @@ class Engineer extends EmployeeClass {
         this.role = "Engineer";
     }
     getGithub() {
-        console.log(`My github username is ${this.ghUsername}`);
+        return `My github username is ${this.ghUsername}`;
     }
     getRole() {
-        console.log(`My role is ${this.role}`);
+        return `My role is ${this.role}`;
     }
 }
 
@@ -60,4 +60,4 @@ function makeEngineerHTML(data) {
   return EngineerString;
 }
 
-module.exports = inquireEngineer;
+module.exports = {inquireEngineer, Engineer};

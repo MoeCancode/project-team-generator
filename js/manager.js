@@ -65,4 +65,4 @@ function makeManagerHTML(data) {
   return managerString;
 }
 
-module.exports = inquireManager;
+module.exports = {inquireManager, Manager};

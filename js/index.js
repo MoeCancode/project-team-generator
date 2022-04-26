@@ -9,7 +9,7 @@ var htmlString = "";
 
 function startProject() {
   //Call function that inquires for manager details
-  managerjs().then((managerString) => {
+  managerjs.inquireManager().then((managerString) => {
     htmlString = htmlString + managerString;
 
     addOrNo();
@@ -50,12 +50,12 @@ function addEmployee() {
     ])
     .then((answer) => {
       if (answer.choose == "ADD AN ENGINEER") {
-        engineerjs().then((engineerString) => {
+        engineerjs.inquireEngineer().then((engineerString) => {
           htmlString = htmlString + engineerString;
           addOrNo();
         });
       } else if (answer.choose == "ADD AN INTERN") {
-        internjs().then((internString) => {
+        internjs.inquireIntern().then((internString) => {
           htmlString = htmlString + internString;
           addOrNo();
         });

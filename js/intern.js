@@ -61,4 +61,4 @@ function makeInternHTML(data) {
   return internString;
 }
 
-module.exports = inquireIntern;
+module.exports = {inquireIntern, Intern};
