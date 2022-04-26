@@ -11,10 +11,10 @@ class Manager extends EmployeeClass {
         this.role = "Manager";
     }
     getofficeNum() {
-        console.log(`My office num is ${this.officeNum}`);
+        return `My office number is ${this.officeNum}`;
     }
     getRole() {
-        console.log(`My role is ${this.role}`)
+        return `My role is ${this.role}`;
     }
 }
 
