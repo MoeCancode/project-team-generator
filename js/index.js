@@ -87,11 +87,11 @@ function compileHtml() {
     <div class="heading">
         <h1>PROJECT TEAM MEMBERS</h1>
     </div>
-
+    <div id= "flexThis">
     
     ${htmlString}
     
-
+    </div>
 
     <script src="./js/script.js"></script>
 </body>
@@ -125,11 +125,16 @@ a {
 
 .card {
     margin: 25px;
+    text-align: left;
 }
 
 .card-header {
     background-color: white;
     color: black;
+}
+
+#flexThis {
+  text-align: -webkit-center;
 }
   `;
 
