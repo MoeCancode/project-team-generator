@@ -10,16 +10,16 @@ class Employee {
         this.role = "Employee";
     }
     getName() {
-        console.log(`This is ${this.name}`);
+        return `This is ${this.name}`;
     }
     getId() {
-        console.log(`My ID is ${this.id}`);
+        return `My ID is ${this.id}`;
     }
     getEmail() {
-        console.log(`My email address is ${this.email}`);
+        return `My email address is ${this.email}`;
     }
     getRole() {
-        console.log(`My role is ${this.role}`);
+        return `My role is ${this.role}`
     }
 }
 
