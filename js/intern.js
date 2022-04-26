@@ -53,7 +53,7 @@ function makeInternHTML(data) {
     <h5 class="card-title">${data.name}</h5>
     <p class="card-text">ID: ${data.id}</p>
     <p class="card-text">EMAIL: <a href="mailto:${data.email}">${data.email}</a></p>
-    <p class="card-text">SCHOOL NAME: ${data.school}</p>
+    <p class="card-text">SCHOOL: ${data.school}</p>
   </div>
 </div>
   `
