@@ -25,21 +25,53 @@ function inquireManager() {
             type: "input",
             message: "ENTER MANAGER NAME: ",
             name: "inputName",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         },
         {
             type: "input",
             message: "ENTER MANAGER ID: ",
             name: "inputID",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         },
         {
             type: "input",
             message: "ENTER MANAGER EMAIL: ",
             name: "inputEmail",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         },
         {
             type: "input",
             message: "ENTER MANAGER OFFICE NUMBER: ",
             name: "inputOfficeNumber",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         }
     ]).then(answers => {
         const newManager = new Manager(answers.inputName, answers.inputID, answers.inputEmail, answers.inputOfficeNumber);

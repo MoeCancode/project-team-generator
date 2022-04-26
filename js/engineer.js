@@ -22,21 +22,53 @@ function inquireEngineer() {
             type: "input",
             message: "ENTER ENGINEER NAME: ",
             name: "inputName",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         },
         {
             type: "input",
             message: "ENTER ENGINEER ID: ",
             name: "inputID",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         },
         {
             type: "input",
             message: "ENTER ENGINEER EMAIL: ",
             name: "inputEmail",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         },
         {
             type: "input",
             message: "ENTER ENGINEER GITHUB USERNAME: ",
             name: "inputGithub",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         }
     ]).then(answers => {
         const newEngineer = new Engineer(answers.inputName, answers.inputID, answers.inputEmail, answers.inputGithub);

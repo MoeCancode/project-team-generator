@@ -22,21 +22,53 @@ function inquireIntern() {
             type: "input",
             message: "ENTER INTERN NAME: ",
             name: "inputName",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         },
         {
             type: "input",
             message: "ENTER INTERN ID: ",
             name: "inputID",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         },
         {
             type: "input",
             message: "ENTER INTERN EMAIL: ",
             name: "inputEmail",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         },
         {
             type: "input",
             message: "ENTER INTERN SCHOOL NAME: ",
             name: "inputSchool",
+            validate: (inputvalue) => {
+                if (inputvalue) {
+                  return true;
+                } else {
+                  console.log(" PLEASE ENTER A VALID ANSWER");
+                  return false;
+                }
+              }
         }
     ]).then(answers => {
         const newIntern = new Intern(answers.inputName, answers.inputID, answers.inputEmail, answers.inputSchool);
