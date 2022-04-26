@@ -14,7 +14,7 @@
   
   <br>
 
-  <img src = "./assets/demonstrate.gif">
+  <img src = "./assets//images/generated.png">
 
   <br>
 
@@ -39,9 +39,19 @@
 
   Here is a short video that demonstrates how to use the application:
 
-  <img src = "./assets/demonstrate.gif">
+  <img src = "./assets/videos/demoGif.gif">
 
-  You can also find this video inside the assets folder of this repository.
+  <br>
+
+  I also made use of `jest` to test each class file. Several tests were written for each file and they can ve viewed inside the `test` folder. Here is a demonstartion os the tests passing:
+
+  <br>
+
+  <img src = "./assets/videos/testVid.gif">
+
+<br>
+
+  You can also find these videos inside the `assets` folder of this repository.
 
   <br>
 

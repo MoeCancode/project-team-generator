@@ -98,7 +98,7 @@ function compileHtml() {
 </html>
     `;
 
-    fs.writeFileSync(path.join(process.cwd(), "index.html"), completeString);
+    fs.writeFileSync(path.join(process.cwd(), "../index.html"), completeString);
 }
 
 //Styles the created html file
@@ -138,7 +138,7 @@ a {
 }
   `;
 
-  fs.writeFileSync(path.join(process.cwd(), "style.css"), cssString);
+  fs.writeFileSync(path.join(process.cwd(), "../style.css"), cssString);
 
 }
 
